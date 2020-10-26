@@ -41,7 +41,7 @@ void initialize()
 void display()
 {
     int i;
-    for (int i=STACK_SIZE-1;i<=0;i--) { // スタックの上から下に for文を回す
+    for (int i=STACK_SIZE-1;i>=0;i--) { // スタックの上から下に for文を回す
         if (i==sp){ // スタックポインタの位置のとき SP-> を出力
             printf("sp->");
         }else{
@@ -71,6 +71,8 @@ int main(void)
             id=pop();
             if (id > 0){
                 printf("id = %d was picked\n", id);
+            }else{
+                printf("pos is failed.\n");
             }
         }
         // 設問８：スタックの中身を表示
